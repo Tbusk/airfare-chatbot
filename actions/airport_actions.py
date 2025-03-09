@@ -70,3 +70,27 @@ class ActionGetDepartureLocation(Action):
         dispatcher.utter_message(text=f'Couldn\'t find a flight with number {flight_number}.  Please check that you entered it correctly and try again.')
 
         return []
+
+class ActionGetDepartureDateAndTime(Action):
+    def name(self) -> Text:
+        return "action_get_departure_date_and_time"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        flights = airline.scheduled_flights
+
+        flight_number = tracker.get_slot('flight_number')
+
+        for flight in flights:
+            if flight.get_flight_number() == int(flight_number):
+
+                departure_datetime = flight.get_departure_time()
+                departure_date = departure_datetime.date().strftime('%B %d, %Y')
+                departure_time = departure_datetime.strftime('%I:%M %p')
+
+
+                dispatcher.utter_message(text=f'{departure_date} at {departure_time}.')
+                return []
+
+        dispatcher.utter_message(text=f'Couldn\'t find a flight with number {flight_number}.  Please check that you entered it correctly and try again.')
+
+        return []

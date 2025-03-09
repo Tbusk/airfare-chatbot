@@ -132,6 +132,8 @@ nlu:
     - Where does my flight go to?
     - Where does my plane end up at?
     - Where does my flight land?
+    - Where is the end location?
+    - Where is the destination?
 
 - intent: get_flight_departure_location_information
   examples: |
@@ -145,6 +147,8 @@ nlu:
     - Where does my flight begin?
     - Where does it begin?
     - Where does it start?
+    - Where is takeoff?
+    - Where is take off?
     - Where does it take off from?
     - Where does my plane take off from?
     - What location does my flight leave from?
@@ -155,6 +159,18 @@ nlu:
     - What location does my plane start at?
     - What location does my plane start off at?
 
+- intent: get_flight_departure_date_and_time
+  examples: |
+    - When does my flight take off?
+    - When do I need to be at the airport?
+    - When is takeoff?
+    - When does my flight leave?
+    - When does flight [1](flight_number) leave?
+    - When does flight number [1](flight_number) take off?
+    - When does my flight with number [1](flight_number) take off?
+    - When does my flight with number [1](flight_number) leave?
+    - Flight number [1](flight_number) leaves when?
+    - Flight [1](flight_number) takes off at what time?
 
 - intent: collect_flight_number
   examples: |

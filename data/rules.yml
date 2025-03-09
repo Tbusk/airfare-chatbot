@@ -37,3 +37,11 @@ rules:
   steps:
   - intent: get_flight_departure_location_information
   - action: action_get_departure_location
+
+- rule: Get flight departure date and time if flight number is already set
+  condition:
+  - slot_was_set:
+    - flight_number
+  steps:
+  - intent: get_flight_departure_date_and_time
+  - action: action_get_departure_date_and_time
