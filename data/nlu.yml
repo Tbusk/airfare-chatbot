@@ -89,3 +89,13 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: get_airlines
+  examples: |
+    - what are some names of airlines?
+    - What are airline names?
+    - Name some airlines.
+    - Provide some airline names
+    - Give me some airline names.
+    - Airline names.
+    - airline names.
