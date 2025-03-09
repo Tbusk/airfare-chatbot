@@ -14,16 +14,16 @@ aircraft_no_five = Aircraft(5, 120)
 detroit_to_petoskey = Flight(1, Location('Detroit', 'Michigan', 'United States', '48021'),
                              Location('Petoskey', 'Michigan', 'United States', '49770'), datetime(2025, 3, 10, 5),
                              datetime(2025, 3, 10, 6), aircraft_no_one)
-detroit_to_lansing = Flight(1, Location('Detroit', 'Michigan', 'United States', '48021'),
+detroit_to_lansing = Flight(2, Location('Detroit', 'Michigan', 'United States', '48021'),
                             Location('Lansing', 'Michigan', 'United States', '48901'), datetime(2025, 3, 10, 6),
                             datetime(2025, 3, 10, 7), aircraft_no_two)
-detroit_to_kalamazoo = Flight(1, Location('Detroit', 'Michigan', 'United States', '48021'),
+detroit_to_kalamazoo = Flight(3, Location('Detroit', 'Michigan', 'United States', '48021'),
                               Location('Kalamazoo', 'Michigan', 'United States', '49001'), datetime(2025, 3, 10, 7),
                               datetime(2025, 3, 10, 8), aircraft_no_three)
-detroit_to_big_rapids = Flight(1, Location('Detroit', 'Michigan', 'United States', '48021'),
+detroit_to_big_rapids = Flight(4, Location('Detroit', 'Michigan', 'United States', '48021'),
                                Location('Big Rapids', 'Michigan', 'United States', '49307'), datetime(2025, 3, 10, 8),
                                datetime(2025, 3, 10, 10), aircraft_no_four)
-detroit_to_iron_mountain = Flight(1, Location('Detroit', 'Michigan', 'United States', '48021'),
+detroit_to_iron_mountain = Flight(5, Location('Detroit', 'Michigan', 'United States', '48021'),
                                   Location('Iron Mountain', 'Michigan', 'United States', '49801'),
                                   datetime(2025, 3, 10, 9), datetime(2025, 3, 10, 12), aircraft_no_five)
 

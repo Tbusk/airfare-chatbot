@@ -9,6 +9,10 @@ intents:
   - mood_unhappy
   - bot_challenge
   - get_number_of_scheduled_flights
+  - get_list_of_scheduled_flights
+  - get_flight_arrival_location_information
+  - collect_flight_number
+  - get_flight_departure_location_information
 
 responses:
   utter_greet:
@@ -30,9 +34,29 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_collect_flight_number:
+  - text: "What is your flight number?"
+
+  utter_thanks:
+  - text: "Thanks!"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
+entities:
+  - flight_number
+
+slots:
+  flight_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: flight_number
+
 actions:
   - action_get_number_of_scheduled_flights
+  - action_get_list_of_scheduled_flights
+  - utter_collect_flight_number
+  - action_get_arrival_location
+  - action_get_departure_location

@@ -97,3 +97,70 @@ nlu:
     - How busy is the schedule?
     - How many flights are booked?
     - How many flights are there?
+
+- intent: get_list_of_scheduled_flights
+  examples: |
+    - What flights are scheduled?
+    - List the scheduled flights.
+    - Show me what flights are on the schedule.
+    - What does the schedule look like?
+    - Show me the schedule.
+    - What flights are booked?
+    - What flights are on the books?
+    - What flights are on the schedule?
+
+- intent: get_flight_arrival_location_information
+  examples: |
+    - Where is my flight going to land?
+    - Where is my flight going to land? I'm on flight number [1](flight_number).
+    - Where is flight [1](flight_number) going to land?
+    - Where does flight [1](flight_number) land?
+    - My flight is number [1](flight_number). Where does it land?
+    - My flight is number [1](flight_number). Where does it go to?
+    - What location does my flight land at?
+    - What location is my flight arriving at?
+    - What location does flight [1](flight_number) land at?
+    - What location does flight [1](flight_number) arrive at?
+    - What location does flight [1](flight_number) go to?
+    - What location does plane with flight number [1](flight_number) go to?
+    - Where is my flight going to?
+    - Where is my plane going to?
+    - Where is my flight's destination?
+    - Where does it go to?
+    - Where does it land?
+    - What location does it land at?
+    - Where does my flight go to?
+    - Where does my plane end up at?
+    - Where does my flight land?
+
+- intent: get_flight_departure_location_information
+  examples: |
+    - Where is my flight taking off from?
+    - Where is my flight with number [1](flight_number) taking off from?
+    - Where does flight [1](flight_number) begin?
+    - Where does flight number [1](flight_number) start?
+    - My flight number is [1](flight_number). Where does it begin?
+    - I'm on flight number [1](flight_number). Where does it begin?
+    - Where does my flight start out at?
+    - Where does my flight begin?
+    - Where does it begin?
+    - Where does it start?
+    - Where does it take off from?
+    - Where does my plane take off from?
+    - What location does my flight leave from?
+    - What location does my flight start at?
+    - What location does my plane leave from?
+    - Where does my flight depart from?
+    - What location does my plane take off from?
+    - What location does my plane start at?
+    - What location does my plane start off at?
+
+
+- intent: collect_flight_number
+  examples: |
+    - My flight number is [1](flight_number).
+    - [1](flight_number).
+    - [1](flight_number)
+    - [1](flight_number) is my flight number.
+    - [1](flight_number) I believe.
+    - It should be [1](flight_number).

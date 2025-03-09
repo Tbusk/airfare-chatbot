@@ -16,3 +16,24 @@ rules:
   steps:
   - intent: get_number_of_scheduled_flights
   - action: action_get_number_of_scheduled_flights
+
+- rule: Provide scheduled flights
+  steps:
+  - intent: get_list_of_scheduled_flights
+  - action: action_get_list_of_scheduled_flights
+
+- rule: Get flight arrival location if flight number is already set
+  condition:
+  - slot_was_set:
+    - flight_number
+  steps:
+  - intent: get_flight_arrival_location_information
+  - action: action_get_arrival_location
+
+- rule: Get flight departure location if flight number is already set
+  condition:
+  - slot_was_set:
+    - flight_number
+  steps:
+  - intent: get_flight_departure_location_information
+  - action: action_get_departure_location
