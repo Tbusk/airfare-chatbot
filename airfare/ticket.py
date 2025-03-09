@@ -1,12 +1,11 @@
 class Ticket:
 
-    def __init__(self, ticket_id, from_airport, to_airport, airplane, price, departure_time, expected_duration_minutes):
+    def __init__(self, ticket_id, from_airport, to_airport, price, departure_time, expected_duration_minutes):
         self.ticket_id = ticket_id
         self.from_airport = from_airport
         self.to_airport = to_airport
         self.departure_time = departure_time
         self.expected_duration_minutes = expected_duration_minutes
-        self.airplane = airplane
         self.price = price
 
     def get_from_airport(self):
@@ -20,9 +19,6 @@ class Ticket:
 
     def get_expected_duration_minutes(self):
         return self.expected_duration_minutes
-
-    def get_airplane(self):
-        return self.airplane
 
     def get_price(self):
         return self.price

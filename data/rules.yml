@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Provide airport names
+  steps:
+  - intent: get_airlines
+  - action: action_get_airlines

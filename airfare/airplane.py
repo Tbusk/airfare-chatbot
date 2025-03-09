@@ -1,12 +1,10 @@
-from airfare.airport import Airport
 from airfare.ticket import Ticket
 
 
 class Airplane:
 
-    def __init__(self, airplane_id: int, airport: Airport, passenger_capacity: int, fuel_capacity: float):
+    def __init__(self, airplane_id: int, passenger_capacity: int, fuel_capacity: float):
         self.airplane_id = airplane_id
-        self.airport = airport
         self.passenger_capacity = passenger_capacity
         self.fuel_capacity = fuel_capacity
         self.tickets = []
@@ -30,6 +28,3 @@ class Airplane:
 
     def get_fuel_capacity(self):
         return self.fuel_capacity
-
-    def get_airport(self):
-        return self.airport
