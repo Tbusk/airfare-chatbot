@@ -64,3 +64,28 @@ stories:
   - action: utter_collect_flight_number
   - intent: collect_flight_number
   - action: action_get_flight_price
+
+- story: Carry-on policy inquiry
+  steps:
+  - intent: ask_carry_on_policy
+  - action: utter_carry_on_policy
+
+- story: Baggage allowance inquiry
+  steps:
+  - intent: ask_baggage_allowance
+  - action: utter_baggage_allowance
+
+- story: Check-in process inquiry
+  steps:
+  - intent: ask_check_in_process
+  - action: utter_check_in_process
+
+- story: Flight delay inquiry
+  steps:
+  - intent: ask_flight_delay
+  - action: utter_flight_delay
+
+- story: Ticket change or refund inquiry
+  steps:
+  - intent: ask_ticket_change_or_refund
+  - action: utter_ticket_change_or_refund
