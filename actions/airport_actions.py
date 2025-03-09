@@ -5,6 +5,17 @@ from rasa_sdk.executor import CollectingDispatcher
 
 from airfare import airline
 
+class ActionDefaultFallback(Action):
+
+    def name(self) -> Text:
+        return "action_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        flights = airline.scheduled_flights
+
+        dispatcher.utter_message(text='I\'m sorry. I\'m afraid I don\'t know how to respond to that. Please ask me something else.')
+        return []
 
 class ActionGetNumberOfFlights(Action):
 
@@ -32,7 +43,7 @@ class ActionGetListOfFlights(Action):
         for index, flight in enumerate(flights):
             flight_list += f'{index + 1}. Flight #{flight.get_flight_number()} - {flight.get_departure_time()} departure and {flight.get_estimated_arrival_time()} arrival from {flight.get_departure_location().get_location_as_string()} to {flight.get_arrival_location().get_location_as_string()}.\n'
 
-        dispatcher.utter_message(text=f'Sure thing!\n\n {flight_list}')
+        dispatcher.utter_message(text=f'This is the active schedule:\n\n {flight_list}')
         return []
 
 class ActionGetArrivalLocation(Action):
@@ -76,6 +87,7 @@ class ActionGetDepartureDateAndTime(Action):
         return "action_get_departure_date_and_time"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
         flights = airline.scheduled_flights
 
         flight_number = tracker.get_slot('flight_number')

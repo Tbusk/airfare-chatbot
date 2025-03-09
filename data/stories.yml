@@ -29,6 +29,13 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+- story: get flight departure date and time
+  steps:
+  - intent: get_flight_departure_date_and_time
+  - action: utter_collect_flight_number
+  - intent: collect_flight_number
+  - action: action_get_departure_date_and_time
+
 - story: get flight arrival location
   steps:
   - intent: get_flight_arrival_location_information
@@ -42,10 +49,3 @@ stories:
   - action: utter_collect_flight_number
   - intent: collect_flight_number
   - action: action_get_departure_location
-
-- story: get flight departure date and time
-  steps:
-  - intent: get_flight_departure_date_and_time
-  - action: utter_collect_flight_number
-  - intent: collect_flight_number
-  - action: action_get_departure_date_and_time

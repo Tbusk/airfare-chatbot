@@ -45,3 +45,8 @@ rules:
   steps:
   - intent: get_flight_departure_date_and_time
   - action: action_get_departure_date_and_time
+
+- rule: Handle out of scope queries
+  steps:
+  - intent: nlu_fallback
+  - action: action_fallback

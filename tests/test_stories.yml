@@ -89,3 +89,57 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: get number of scheduled flights
+  steps:
+  - user: |
+      How many flights are scheduled?
+    intent: get_number_of_scheduled_flights
+  - action: action_get_number_of_scheduled_flights
+
+- story: get list of scheduled flights
+  steps:
+  - user: |
+      What flights are scheduled?
+    intent: get_list_of_scheduled_flights
+  - action: action_get_list_of_scheduled_flights
+
+- story: collect flight number
+  steps:
+  - user: |
+      My flight number is 134.
+    intent: collect_flight_number
+  - action: action_get_departure_date_and_time
+
+- story: get flight arrival location information
+  steps:
+  - user: |
+      Where is my flight going to land?
+    intent: get_flight_arrival_location_information
+  - action: utter_collect_flight_number
+  - user: |
+      It's 154.
+    intent: collect_flight_number
+  - action: action_get_arrival_location
+
+- story: get flight departure location information
+  steps:
+  - user: |
+      Where is my flight taking off from?
+    intent: get_flight_departure_location_information
+  - action: utter_collect_flight_number
+  - user: |
+      It's 122.
+    intent: collect_flight_number
+  - action: action_get_departure_location
+
+- story: get flight departure date and time
+  steps:
+  - user: |
+      When does my flight take off?
+    intent: get_flight_departure_date_and_time
+  - action: utter_collect_flight_number
+  - user: |
+      It's 11123.
+    intent: collect_flight_number
+  - action: action_get_departure_date_and_time

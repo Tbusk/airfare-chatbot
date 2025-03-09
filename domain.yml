@@ -1,15 +1,5 @@
 version: "3.1"
 
-entities:
-  - flight_number
-
-slots:
-  flight_number:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: flight_number
-
 intents:
   - greet
   - goodbye
@@ -20,18 +10,29 @@ intents:
   - bot_challenge
   - get_number_of_scheduled_flights
   - get_list_of_scheduled_flights
-  - get_flight_arrival_location_information
   - collect_flight_number
+  - get_flight_arrival_location_information
   - get_flight_departure_location_information
   - get_flight_departure_date_and_time
 
 actions:
+  - action_fallback
   - action_get_number_of_scheduled_flights
   - action_get_list_of_scheduled_flights
   - utter_collect_flight_number
   - action_get_arrival_location
   - action_get_departure_location
   - action_get_departure_date_and_time
+
+entities:
+  - flight_number
+
+slots:
+  flight_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: flight_number
 
 responses:
   utter_greet:

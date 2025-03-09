@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30e9c88-c9da-4950-930f-49cbba789381" name="Changes" comment="Adding get flight arrival location, get departure location, adjusting flight numbers">
+    <list default="true" id="e30e9c88-c9da-4950-930f-49cbba789381" name="Changes" comment="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/.rasa/cache/cache.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/airport_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/airport_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/20250308-103611-feasible-soil.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_stories.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,28 +54,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.airfare_application.executor&quot;: &quot;Run&quot;,
-    &quot;Python.airline (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.airline.executor&quot;: &quot;Run&quot;,
-    &quot;Python.airplane.executor&quot;: &quot;Run&quot;,
-    &quot;Python.airport_actions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.customer (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.customer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.flight.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gearf_l/PycharmProjects/MidtermProjectChatbot/documents&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.airfare_application.executor": "Run",
+    "Python.airline (1).executor": "Run",
+    "Python.airline.executor": "Run",
+    "Python.airplane.executor": "Run",
+    "Python.airport_actions.executor": "Run",
+    "Python.customer (1).executor": "Run",
+    "Python.customer.executor": "Run",
+    "Python.flight.executor": "Run",
+    "Python.python -m spacy download en_core_web_md.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/gearf_l/PycharmProjects/MidtermProjectChatbot/documents",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gearf_l\PycharmProjects\MidtermProjectChatbot\documents" />
@@ -84,12 +91,14 @@
       <command value="rasa init" />
       <command value="rasa init --no-prompt" />
       <command value="pip install python-dotenv" />
-      <command value="rasa run actions" />
+      <command value="pip3 install spacy" />
+      <command value="python -m spacy download en_core_web_md" />
       <command value="rasa train" />
+      <command value="rasa run actions" />
       <command value="rasa shell" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.airport_actions">
+  <component name="RunManager" selected="Python.python -m spacy download en_core_web_md">
     <configuration name="airline (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MidtermProjectChatbot" />
       <option name="ENV_FILES" value="" />
@@ -105,29 +114,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/airfare/airline.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="airline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MidtermProjectChatbot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/airline" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/airline/airline.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,13 +191,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="python -m spacy download en_core_web_md" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MidtermProjectChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="spacy" />
+      <option name="PARAMETERS" value="download en_core_web_md" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.python -m spacy download en_core_web_md" />
         <item itemvalue="Python.airport_actions" />
         <item itemvalue="Python.customer (1)" />
         <item itemvalue="Python.flight" />
         <item itemvalue="Python.airline (1)" />
-        <item itemvalue="Python.airline" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +242,8 @@
       <updated>1741447815890</updated>
       <workItem from="1741447816915" duration="7562000" />
       <workItem from="1741456817068" duration="23415000" />
-      <workItem from="1741535038166" duration="8283000" />
+      <workItem from="1741535038166" duration="11138000" />
+      <workItem from="1741546670257" duration="4075000" />
     </task>
     <task id="LOCAL-00001" summary="initializing project with rasa init">
       <option name="closed" value="true" />
@@ -307,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741541014623</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples">
+      <option name="closed" value="true" />
+      <created>1741543789495</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741543789495</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,13 +341,15 @@
     <MESSAGE value="fixing circular dependency issue, adding intent to get some airline names" />
     <MESSAGE value="replacing airline objects, adding new action that gets number of scheduled flights" />
     <MESSAGE value="Adding get flight arrival location, get departure location, adjusting flight numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding get flight arrival location, get departure location, adjusting flight numbers" />
+    <MESSAGE value="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$airplane.coverage" NAME="airplane Coverage Results" MODIFIED="1741487649488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$airline__1_.coverage" NAME="airline (1) Coverage Results" MODIFIED="1741501462852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$airline.coverage" NAME="airline Coverage Results" MODIFIED="1741500950286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airline" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$flight.coverage" NAME="flight Coverage Results" MODIFIED="1741501600774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />
+    <SUITE FILE_PATH="coverage/MidtermProjectChatbot$python__m_spacy_download_en_core_web_md.coverage" NAME="python -m spacy download en_core_web_md Coverage Results" MODIFIED="1741551893558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$customer.coverage" NAME="customer Coverage Results" MODIFIED="1741500820678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airline" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$airfare_application.coverage" NAME="airfare_application Coverage Results" MODIFIED="1741487768983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$customer__1_.coverage" NAME="customer (1) Coverage Results" MODIFIED="1741501607706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />
