@@ -90,12 +90,10 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: get_airlines
+- intent: get_number_of_scheduled_flights
   examples: |
-    - what are some names of airlines?
-    - What are airline names?
-    - Name some airlines.
-    - Provide some airline names
-    - Give me some airline names.
-    - Airline names.
-    - airline names.
+    - How many flights are scheduled?
+    - How many flights are on the schedule?
+    - How busy is the schedule?
+    - How many flights are booked?
+    - How many flights are there?

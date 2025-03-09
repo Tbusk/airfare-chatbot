@@ -14,5 +14,5 @@ rules:
 
 - rule: Provide airport names
   steps:
-  - intent: get_airlines
-  - action: action_get_airlines
+  - intent: get_number_of_scheduled_flights
+  - action: action_get_number_of_scheduled_flights

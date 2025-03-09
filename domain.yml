@@ -8,7 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - get_airlines
+  - get_number_of_scheduled_flights
 
 responses:
   utter_greet:
@@ -35,4 +35,4 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
-  - action_get_airlines
+  - action_get_number_of_scheduled_flights
