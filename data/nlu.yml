@@ -178,3 +178,43 @@ nlu:
     - When does my flight with number [175](flight_number) leave?
     - Flight number [1](flight_number) leaves when?
     - Flight [111](flight_number) takes off at what time?
+
+   - intent: ask_carry_on_policy
+  examples: |
+    - Can I bring a carry-on bag?
+    - What is the carry-on bag policy?
+    - How many carry-on bags am I allowed?
+    - Is there a size limit for carry-on luggage?
+    - Do I have to pay for a carry-on bag?
+
+- intent: ask_baggage_allowance
+  examples: |
+    - What is the baggage allowance for my flight?
+    - How many bags can I check in?
+    - Is there a weight limit for checked bags?
+    - Do I have to pay for checked luggage?
+    - What are the baggage fees?
+
+- intent: ask_check_in_process
+  examples: |
+    - How can I check in for my flight?
+    - Where do I check in at the airport?
+    - Can I check in online?
+    - What time does check-in open?
+    - Is mobile check-in available?
+
+- intent: ask_flight_delay
+  examples: |
+    - What happens if my flight is delayed?
+    - How do I check if my flight is delayed?
+    - Will I get compensation for a flight delay?
+    - What should I do if my flight is delayed?
+    - Can I rebook my flight if it's delayed?
+
+- intent: ask_ticket_change_or_refund
+  examples: |
+    - How do I request a refund for my ticket?
+    - Can I change my flight date?
+    - What is the cancellation policy?
+    - How much does it cost to change a flight?
+    - Can I transfer my ticket to someone else?
