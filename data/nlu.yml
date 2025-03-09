@@ -191,7 +191,7 @@ nlu:
     - The price of flight [44](flight_number) is what?
     - How much will it cost for flight [55](flight_number)?
 
-   - intent: ask_carry_on_policy
+- intent: ask_carry_on_policy
   examples: |
     - Can I bring a carry-on bag?
     - What is the carry-on bag policy?
