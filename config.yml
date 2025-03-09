@@ -16,9 +16,7 @@ pipeline:
     case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
-  - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
     min_ngram: 1

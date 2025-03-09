@@ -171,6 +171,7 @@ nlu:
     - When does my flight take off?
     - When do I need to be at the airport?
     - When does my flight leave?
+    - When does flight [3](flight_number) begin?
     - When does my flight takeoff?
     - When does flight [144](flight_number) leave?
     - When does flight number [132](flight_number) take off?
@@ -178,3 +179,14 @@ nlu:
     - When does my flight with number [175](flight_number) leave?
     - Flight number [1](flight_number) leaves when?
     - Flight [111](flight_number) takes off at what time?
+
+- intent: get_flight_price
+  examples: |
+    - How much does flight [34](flight_number) cost?
+    - How much did my flight cost?
+    - What is the cost of flight [44](flight_number)?
+    - How much was I billed for flight [32](flight_number)?
+    - What was I billed for flight [22](flight_number)?
+    - What was the customer billed for flight [11](flight_number)?
+    - The price of flight [44](flight_number) is what?
+    - How much will it cost for flight [55](flight_number)?

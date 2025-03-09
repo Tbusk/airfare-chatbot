@@ -46,6 +46,14 @@ rules:
   - intent: get_flight_departure_date_and_time
   - action: action_get_departure_date_and_time
 
+- rule: Get flight price if flight number is already set
+  condition:
+  - slot_was_set:
+    - flight_number
+  steps:
+  - intent: get_flight_price
+  - action: action_get_flight_price
+
 - rule: Handle out of scope queries
   steps:
   - intent: nlu_fallback

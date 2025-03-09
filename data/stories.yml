@@ -29,23 +29,38 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: get flight departure date and time
-  steps:
-  - intent: get_flight_departure_date_and_time
-  - action: utter_collect_flight_number
-  - intent: collect_flight_number
-  - action: action_get_departure_date_and_time
-
-- story: get flight arrival location
+- story: Get flight arrival location if flight number is not set
   steps:
   - intent: get_flight_arrival_location_information
+  - slot_was_set:
+    - flight_number: null
   - action: utter_collect_flight_number
   - intent: collect_flight_number
   - action: action_get_arrival_location
 
-- story: get flight departure location
+- story: Get flight departure location if flight number is not set
   steps:
   - intent: get_flight_departure_location_information
+  - slot_was_set:
+    - flight_number: null
   - action: utter_collect_flight_number
   - intent: collect_flight_number
   - action: action_get_departure_location
+
+- story: Get flight departure date and time if flight number is not set
+  steps:
+  - intent: get_flight_departure_date_and_time
+  - slot_was_set:
+    - flight_number: null
+  - action: utter_collect_flight_number
+  - intent: collect_flight_number
+  - action: action_get_departure_date_and_time
+
+- story: Get flight price if flight number is not set
+  steps:
+  - intent: get_flight_price
+  - slot_was_set:
+    - flight_number: null
+  - action: utter_collect_flight_number
+  - intent: collect_flight_number
+  - action: action_get_flight_price

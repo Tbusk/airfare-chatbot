@@ -12,8 +12,6 @@ class ActionDefaultFallback(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        flights = airline.scheduled_flights
-
         dispatcher.utter_message(text='I\'m sorry. I\'m afraid I don\'t know how to respond to that. Please ask me something else.')
         return []
 
@@ -105,4 +103,24 @@ class ActionGetDepartureDateAndTime(Action):
 
         dispatcher.utter_message(text=f'Couldn\'t find a flight with number {flight_number}.  Please check that you entered it correctly and try again.')
 
+        return []
+
+class ActionGetFlightPrice(Action):
+
+    def name(self) -> Text:
+        return "action_get_flight_price"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        flights = airline.scheduled_flights
+
+        flight_number = tracker.get_slot('flight_number')
+
+        for flight in flights:
+            if flight.get_flight_number() == int(flight_number):
+                price = flight.get_price()
+                dispatcher.utter_message(text=f'That flight costs ${price}.')
+                return []
+
+        dispatcher.utter_message(text=f'Couldn\'t find a flight with number {flight_number}.  Please check that you entered it correctly and try again.')
         return []

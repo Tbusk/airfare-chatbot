@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e30e9c88-c9da-4950-930f-49cbba789381" name="Changes" comment="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="e30e9c88-c9da-4950-930f-49cbba789381" name="Changes" comment="Adding fallback response, adding pipeline based on https://github.com/amin3141/zir-rasabot, adding test stories, and adding readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/.rasa/cache/cache.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/airport_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/airport_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airfare/airline.py" beforeDir="false" afterPath="$PROJECT_DIR$/airfare/airline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airfare/flight.py" beforeDir="false" afterPath="$PROJECT_DIR$/airfare/flight.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/20250308-103611-feasible-soil.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_stories.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +92,9 @@
       <command value="pip install python-dotenv" />
       <command value="pip3 install spacy" />
       <command value="python -m spacy download en_core_web_md" />
-      <command value="rasa train" />
       <command value="rasa run actions" />
       <command value="rasa shell" />
+      <command value="rasa train" />
     </option>
   </component>
   <component name="RunManager" selected="Python.python -m spacy download en_core_web_md">
@@ -243,7 +242,7 @@
       <workItem from="1741447816915" duration="7562000" />
       <workItem from="1741456817068" duration="23415000" />
       <workItem from="1741535038166" duration="11138000" />
-      <workItem from="1741546670257" duration="4075000" />
+      <workItem from="1741546670257" duration="7511000" />
     </task>
     <task id="LOCAL-00001" summary="initializing project with rasa init">
       <option name="closed" value="true" />
@@ -325,11 +324,30 @@
       <option name="project" value="LOCAL" />
       <updated>1741543789495</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding fallback response, adding pipeline based on https://github.com/amin3141/zir-rasabot, adding test stories">
+      <option name="closed" value="true" />
+      <created>1741552510903</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741552510903</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initializing project with rasa init" />
@@ -342,7 +360,9 @@
     <MESSAGE value="replacing airline objects, adding new action that gets number of scheduled flights" />
     <MESSAGE value="Adding get flight arrival location, get departure location, adjusting flight numbers" />
     <MESSAGE value="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding flight departure date time, reorganizing domain.yml, adding some additional training examples" />
+    <MESSAGE value="Adding fallback response, adding pipeline based on https://github.com/amin3141/zir-rasabot, adding test stories, and adding readme" />
+    <MESSAGE value="Adding fallback response, adding pipeline based on https://github.com/amin3141/zir-rasabot, adding test stories, and adding readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fallback response, adding pipeline based on https://github.com/amin3141/zir-rasabot, adding test stories, and adding readme" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MidtermProjectChatbot$airplane.coverage" NAME="airplane Coverage Results" MODIFIED="1741487649488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/airfare" />

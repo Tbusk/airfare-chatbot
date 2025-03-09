@@ -14,6 +14,7 @@ intents:
   - get_flight_arrival_location_information
   - get_flight_departure_location_information
   - get_flight_departure_date_and_time
+  - get_flight_price
 
 actions:
   - action_fallback
@@ -23,6 +24,7 @@ actions:
   - action_get_arrival_location
   - action_get_departure_location
   - action_get_departure_date_and_time
+  - action_get_flight_price
 
 entities:
   - flight_number
@@ -58,7 +60,7 @@ responses:
   - text: "What is your flight number?"
 
   utter_thanks:
-  - text: "Thanks!"
+    - text: "Thanks!"
 
 session_config:
   session_expiration_time: 60
