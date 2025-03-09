@@ -28,3 +28,8 @@ Soon, you'll be able to interact with our chatbot.
 3. Get departure location of a flight.
 4. Get arrival location of a flight.
 5. Get departure time of a flight.
+6. Get price of a flight.
+7. Get check-in procedure.
+8. Get baggage policy.
+9. Get flight delay policy.
+10. Get ticket change / refund policy.
